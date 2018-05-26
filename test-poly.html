@@ -7,7 +7,7 @@
         display: block;
       }
     </style>
-    <h2>Hello [[prop1]]!</h2>
+    <h2>Hello [[userName]]!</h2>
   </template>
 
   <script>
@@ -23,7 +23,7 @@
       static get is() { return 'test-poly'; }
       static get properties() {
         return {
-          prop1: {
+          userName: {
             type: String,
             value: 'test-poly'
           }

@@ -2,23 +2,26 @@
 
 <dom-module id="test-polymer">
 	<template>
-		<style type="text/css">
+		<style>
 			:host {
 				display: block;
 			}
 		</style>
-		<h2>Hello [[nombreUsurio]] desde polymer!</h2>
+		<h2>Hello [[nombreUsuario]] desde polymer!</h2>
 	</template>
-	<script type="text/javascript">
+	<script>
 		class TestPolymer extends Polymer.Element {
 			static get is(){ return 'test-polymer'; }
-			static get properties(){
-				nombreUsurio: {
-					type: String,
-					value ''
-				}
-			};
+			static get properties() {
+				return {
+					nombreUsuario: {
+						type: String,
+						value: ''
+					}
+				};
+			}
 			 //Funcions
+			 //
 		}
 		window.customElements.define(TestPolymer.is, TestPolymer);
 	</script>
