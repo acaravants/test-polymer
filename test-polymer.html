@@ -1,0 +1,25 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="test-polymer">
+	<template>
+		<style type="text/css">
+			:host {
+				display: block;
+			}
+		</style>
+		<h2>Hello [[nombreUsurio]] desde polymer!</h2>
+	</template>
+	<script type="text/javascript">
+		class TestPolymer extends Polymer.Element {
+			static get is(){ return 'test-polymer'; }
+			static get properties(){
+				nombreUsurio: {
+					type: String,
+					value ''
+				}
+			};
+			 //Funcions
+		}
+		window.customElements.define(TestPolymer.is, TestPolymer);
+	</script>
+</dom-module>
